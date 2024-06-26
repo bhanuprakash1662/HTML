@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+    </style>
+    <form method="post" > 
+        <fieldset>
+        <h2 style="background-color:aquamarine;"><u>REGISTRATION FORM</u> </h2>
+        <p><b><u>Fill the Details for Register</u></b></p>
+
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" placeholder="eg:david" required></input><br><br>
+
+        <label for="mname">Middle Name:</label>
+        <input type="text" id="mname" name="mname" ></input><br><br>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" ></input><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="abc123@gmail.com" required></input> <br>
+        <br>
+        <label for="number">Mobile no.</label> 
+        <input type="tel" id="number" name="number" pattern="[0-9]{10}" placeholder="enter 10 digits"><br>
+
+        <p>Gender</p>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="person" value="male">
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="person" value="female">
+        <br> <br>
+        <label for="date">Date of Birth</label>
+        <input type="date" id="date" names="date"><br>
+        
+        <p>Languages:</p>
+        <input type="checkbox" id="lang" name="lang" value="lang">
+        <label for="lang">English</label>
+        <input type="checkbox" id="lang" name="lang" value="lang">
+        <label for="lang">Hindi</label><input type="checkbox" id="lang" name="lang" value="lang">
+        <label for="lang">Telugu</label> 
+
+        <label for="address"><h3>Address:-</h3></label>
+        <textarea name="address" id="address" placeholder="enter your address"></textarea>
+        <h3>Skills:-</h3>
+        <label for="skills">HTML</label>
+        <input type="checkbox" id="skills" name="skills" value="skills">
+        <label for="skills">JAVA</label>
+        <input type="checkbox" id="skills" name="skills" value="skills">
+        <label for="skills">PYTHON</label>
+        <input type="checkbox" id="skills" name="skills" value="skills"><br><br>
+        <p> Rate your skill here</p>
+        <input type="range" ><br>
+        <label for="resume">Upload your Resume:- </label>
+        <input type="file" id="resume" name="resume" ><br><br>
+        <hr>
+        <input type="checkbox" id="declare" name="declare" value="decalre">
+        <label for="declare">I declare the above furnished information is true to the best of my knowledge</label><br><br>
+        <input type="submit" value="Register">
+        <input type="reset">
+  
+    </fieldset>
+    </form>
+
+</body>
+</html>

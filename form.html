@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+    </style>
+    <form method="post" > 
+        <fieldset>
+        <h2 align="center"><u>REGISTRATION FORM</u> </h2>
+        <p><b><u>Fill the Details for Register</u></b></p>
+
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" placeholder="eg:john" required></input><br><br>
+
+        <label for="mname">Middle Name:</label>
+        <input type="text" id="mname" name="mname" ></input><br><br>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" ></input><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="abcde@gmail.com" required></input>
+
+        <label for="number">Contact no.</label> 
+        <input type="tel" id="number" name="number" pattern="[0-9]{10}" placeholder="10 digits only"><br>
+
+        <p>Gender</p>
+        
+        <input type="radio" id="male" name="person" value="male">
+        <label for="male">Male</label>
+       
+        <input type="radio" id="female" name="person" value="female">
+        <label for="female">Female</label>
+       
+        <input type="radio" id="others" name="person" value="others">
+        <label for="others">Others</label><br><br>
+
+        <label for="date">Date of Birth</label>
+        <input type="date" id="date" names="date"><br>
+        
+        <p>Languages:</p>
+        <input type="checkbox" id="lang" name="lang" value="lang">
+        <label for="lang">English</label>
+        <input type="checkbox" id="lang" name="lang" value="lang">
+        <label for="lang">Hindi</label><input type="checkbox" id="lang" name="lang" value="lang">
+        <label for="lang">Telugu</label> <label for="lang"><br> Others</label><input type="text" id="lang"  name="lang" placeholder="type your language">
+        <label for="address"><h3>Address:-</h3></label>
+        <textarea name="address" id="address" placeholder="enter your address here"></textarea>
+        <h3>Skills:-</h3>
+        <label for="skills">HTML</label>
+        <input type="checkbox" id="skills" name="skills" value="skills">
+        <label for="skills">JAVA</label>
+        <input type="checkbox" id="skills" name="skills" value="skills">
+        <label for="skills">PYTHON</label>
+        <input type="checkbox" id="skills" name="skills" value="skills"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" pattern="[0-9]{8}"><br><br>
+        <label for="resume">Upload Resume:- </label>
+        <input type="file" id="resume" name="resume" ><br><br>
+        <hr>
+        <input type="checkbox" id="declare" name="declare" value="decalre">
+        <label for="declare">I declare the information is true</label><br><br>
+        <input type="submit">
+        <input type="reset">
+
+  
+    </fieldset>
+    </form>
+
+</body>
+</html>
