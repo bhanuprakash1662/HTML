@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       // 1
+        function calculator(a,b,c){
+            if(c=='+')
+                alert(a+b);
+            else if(c=='-')
+                if(a>b)
+                    alert(a-b);
+                else
+                    alert(b-a);
+            else if(c=='*')
+                alert(a*b);
+            else if(c=='/')
+                if(a>b)
+                    alert(a/b);
+                else
+                    alert(b/a);
+            else if(c=='%')
+                alert(a%b);
+        }
+        a=+prompt("enter a value");
+        b=+prompt("enter b value");
+        c=prompt("enter your operator to perforn the operation");
+        calculator(a,b,c);
+
+
+
+
+        //2
+        2
+var fact=1;
+        const f=(a)=>{
+            for(i=1;i<=a;i++){
+                 fact*=i;
+            } return fact;
+        }
+        let a=+prompt("enter a value")
+console.log(f(a))
+
+
+
+//3
+function fizzbuzz(a,b){
+    for(i=a;i<=b;i++){
+      if(i%2==0 && i%3==0){
+          console.log(i+" fizzbuzz");
+      }
+      else if(i%2==0){
+          console.log(i+" fizz");
+      }
+      else if(i%3==0){
+          console.log(i+" buzz");
+      }
+      else{
+          console.log(i+"nill");
+      }
+    }
+  }
+  fizzbuzz(20,40);
+
+
+ // 4
+ function leapYear(a){
+    if(a>500 && a<=2024){
+        if(a%4==0 && a%100!=0 || a%400==0){
+            console.log("leap year");
+        }
+        else{
+            console.log("not a leap year");
+        }
+    }
+    else
+        console.log("year should be between the 500 and 2024");
+}
+a=+prompt("enter a year");
+leapYear(a);
+
+
+//5
+function polli(n){
+s=""
+    for(i=n.length-1;i>=0;i--){
+    s +=n[i]
+    }
+    
+    if (n==s){
+        console.log("pollindrom")
+    }
+    else{
+        console.log("not a pollindrom")
+    }
+}
+n=prompt("enter a number or string")
+polli(n)
+
+
+
+
+//6
+let x=(a)=>{
+        let b=" ";
+        for(i=1;i<=a.length;i++){
+            b+=a[a.length-i];
+        }
+        Console.log(`${a}-${b}`);
+       }
+       let a1=prompt("enter a number")
+       x(a1);
+
+
+
+
+    </script>
+    
+</body>
+</html>
