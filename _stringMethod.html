@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //  1.Uppercase first letter
+
+//- Input: "hello"
+//- Output: "Hello"
+
+//- Input: "world"
+//- Output: "World"
+//hint:charAt(), toUpperCase(), slice(), concat()
+
+program:
+
+let a=prompt("enter a string");
+        let b="",c="";
+        for(i in a){
+         b=a.charAt(0).toUpperCase();
+         c=a.slice(1,a.length);
+        }
+        alert(b+c);
+
+
+
+
+
+
+
+       // 2.Remove vowels
+
+//- Input: "hello"
+//- Output: "hll"
+
+//- Input: "world"
+//- Output: "wrld"
+
+//using replace().
+
+let a1=prompt("enter a string");
+        let b1="";
+        for(i=0;i<a1.length;i++){
+            if(a1[i]=='a' || a1[i]=='e' || a1[i]=='i' || a1[i]=='o' || a1[i]=='u'){
+                continue;
+            }
+            else{
+                b+=a[i];
+            }
+        }
+        alert(b);
+
+
+
+    </script>
+</body>
+</html>
