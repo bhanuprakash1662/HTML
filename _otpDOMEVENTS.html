@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="demo()">clickmee</button>
+    <p></p>
+    <script>
+        let btn=document.getElementsByTagName("button")
+        btn[0].addEventListener("click",()=>{
+            let x=Math.random();
+            let random=Math.floor((x*99999+10000));
+        let p=document.getElementsByTagName("p")
+        p[0].innerHTML=random
+        p[0].style.backgroundColor=`#${random}`
+        p[0].style.color=`#${parseInt(random*8)}`
+        p[0].style.fontSize="120px"
+      
+        })
+       
+        
+
+    </script>
+</body>
+</html>

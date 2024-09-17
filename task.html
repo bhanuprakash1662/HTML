@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cars{
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 50% ;
+        }
+        .car{
+            border: 1px solid black;
+            height:200%;
+            width: 50%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+ <button>search</button>
+
+<ul  class="cars" id="myUL">
+  <li class="car car1"><img src="../css/CSS/images/car-01.webp" height="200px" width="200px" alt=""><a href="#">swift 4567</a></li>
+  <li class="car car2"><img src="../css/CSS/images/front-left-side-47.webp" height="200px" width="200px" alt=""><a href="#">BMW</a></li>
+  <li class="car car3"><img src="../css/CSS/images/kia.webp" height="200px" width="200px"<a href="#">KIA</a></li>
+  <li class="car car4"><img src="../css/CSS/images/mg.webp" height="200px" width="200px"<a href="#">MG</a></li>
+  <li class="car car5"><img src="../css/CSS/images/Mahindra.jpg" height="200px" width="200px"<a href="#">Mahindra</a></li>
+  <li class="car car6"><img src="../css/CSS/images/ferrari.webp" height="200px" width="200px"<a href="#">Ferrari</a></li>
+  <li class="car car7"><img src="../css/CSS/images/lam.webp" height="200px" width="200px"<a href="#">Lamborgini</a></li>
+</ul>
+<script>
+    function myFunction() {
+    
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+    
+      
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+    
+</body>
+</html>

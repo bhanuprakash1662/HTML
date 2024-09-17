@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+<!-- 1
+    *
+    * *
+    * * *
+    * * * * -->
+
+// rows=prompt("enter rows ")
+// for(i=1;i<=rows;i++){
+//     res=""
+//     for(j=1;j<=i;j++){
+//      res=res+"* "   
+//     }
+//     console.log(res)
+// }
+
+
+//   *
+//  * *
+// * * *
+//* * * *
+
+
+// rows=prompt("enter rows   ")
+// for(i=1;i<=rows;i++){
+//     res=""
+//     for(k=1;k<=rows-i;k++){
+//         res=res+" "
+//     }
+//     for(j=1;j<=i;j++){
+//         res=res+"* "
+//     }
+//     console.log(res)
+// }
+
+                                //(or)
+
+// rows=prompt("enter rows   ")
+// for(i=1;i<=rows;i++){
+//     console.log(" ".repeat(rows-i)+"* ".repeat(i))
+// }
+
+
+
+//* * * *
+// * * *
+//  * *
+//   *
+
+// rows=prompt("enter rows   ")
+// for(i=1;i<=rows;i++){
+//   res=""
+//   for(k=0;k<=i-1;k++){
+//       res=res+" "
+//   }
+//   for(j=i;j<=rows;j++){
+//       res=res+"* "
+//   }
+//   console.log(res)
+// }       
+//method
+
+//(or)
+
+rows=prompt("enter rows   ")
+for(i=1;i<=rows;i++){
+  res=""
+  for(k=0;k<=i-1;k++){
+      res=res+" "
+  }
+  for(j=1;j<=rows-i+1;j++){
+      res=res+"* "
+  }
+  console.log(res)
+}  
+
+
+          //(or)
+rows=prompt("enter ")
+for(i=1;i<=rows;i++){
+    console.log(" ".repeat(i-1)+"* ".repeat(rows-i+1))
+}
+
+
+
+
+//1 
+//1 2 
+//1 2 3 
+//1 2 3 4 
+//1 2 3 4 5 
+
+rows=prompt("enter number")
+for(i=1;i<=rows;i++){
+    res=""
+    for(j=1;j<=i;j++){
+      res=res+j+" "
+    }
+      console.log(res)
+}
+
+
+
+
+
+//1 
+//2 3 
+//4 5 6 
+//7 8 9 10 
+//11 12 13 14 15 
+
+rows=prompt("enter number")
+num=1
+for(i=1;i<=rows;i++){
+    res=""
+    for(j=1;j<=i;j++){
+      res=res+num+" "
+      num++
+    }
+      console.log(res)
+}
+
+
+ // -------------------------------DAY 2------------------------------------------
+
+
+//enter rows: 5
+//* * * * * 
+// *     * 
+//  *   * 
+//   * * 
+//    * 
+rows=prompt("enter rows: ")
+for(i=1;i<=rows;i++){
+    res=""
+    for(k=1;k<=i-1;k++){
+        res=res+" "
+    }
+    for(j=rows;j>=i;j--){
+        if(i==1||j==rows||i==j)
+        res=res+"* "
+        else
+        res=res+"  "
+    }
+    console.log(res)
+}
+                //  ( OR )
+rows=prompt("enter rows: ")
+for(i=1;i<=rows;i++)
+{
+  res=""
+  for(k=1;k<=i-1;k++)
+  {
+  res=res+" "
+  }
+  for(j=1;j<=rows-i+1;j++)
+  {
+  if(i==1||j==1||i+j==rows+1)
+  res=res+"* "  
+  else
+  res=res+"  "
+  }                      
+console.log(res)                 //can be compliler prblm sometimes at ( i+j==rows+1 )
+}
+                 
+                
+                
+//ENTER ROWS:5
+//1 
+//3 2 
+//4 5 6 
+//10 9 8 7 
+//11 12 13 14 15 
+ 
+
+rows=prompt("enter rows: ")
+num=1
+for(i=1;i<=rows;i++){
+    res="",res_rev=""
+    for(j=1;j<=i;j++){
+        if(!(i%2)==0)
+        res=res+num+" "
+        else
+        res_rev=num+" "+res_rev
+        num++
+    }
+    if(!(i%2==0))
+    console.log(res)
+    else
+    console.log(res_rev)
+}
+
+
+
+//1 
+//3 2
+//4 5 6 
+//10 9 8 7
+//11 12 13 14 15 
+
+
+
+rows=prompt("enter rows")
+num=1
+for(i=1;i<=rows;i++){
+    res=""
+    for(j=1;j<=i;j++){
+        res=res+num+" "
+        num++
+    }
+    if(i%2==0)
+    console.log(res.trim().split(" ").reverse().join(" "))
+    else
+    console.log(res)
+}
+
+
+
+
+
+//enter: meghana
+//m 
+//e g 
+//h a n 
+//a * * * 
+
+
+
+
+name=prompt("enter:      ")
+let rows=name.length
+k=0
+for(i=1;i<=rows;i++){
+    res=""
+    for(j=1;j<=i;j++){
+        if(name[k]==undefined){
+            res=res+"* "
+        }else{
+            res=res+name[k]+" "
+        }
+        k++
+    }
+    if(name[k]==undefined){
+        i=rows+1
+    }
+    console.log(res)
+}
+
+</script>
+</body>
+</html>

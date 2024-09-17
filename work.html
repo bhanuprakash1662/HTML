@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="search" id="seh">
+
+    <div id="di"></div>
+
+    <script>
+        let seh=document.getElementById("seh")
+        let di=document.getElementById("di")
+        
+        let product=[{
+            
+             name:"creta",
+             img:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.autocarindia.com%2Fnew-cars&psig=AOvVaw0fhj_D9XYCbAvq8knSmVpr&ust=1726393104216000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIjE7M-RwogDFQAAAAAdAAAAABAJ"
+            },
+            { name:"kia",
+              img:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kia.com%2Feu%2Fnew-cars%2Fdigital-discover%2F&psig=AOvVaw37AP0ICzKKliZeDdad-Jqs&ust=1726396207452000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjlqJadwogDFQAAAAAdAAAAABAE"
+
+            },
+            { name:"swift",
+              img:"https://images.pexels.com/photos/3979134/pexels-photo-3979134.jpeg?auto=compress&cs=tinysrgb&w=600"
+            }]
+            seh.addEventListener("input",(e)=>{
+                let ss=e.target.value.toLowerCase()
+                let sp=product.filter((item)=>{
+                    if(ss==item.name){
+                       
+                        let imge=document.createElement("img")
+                        console.log(item)
+                        di.innerHTML=item.name
+                        imge.src= item.img 
+                        di.appendChild(imge)
+                        
+                    }
+                })
+               
+                
+
+
+        })
+        
+    </script>
+    
+</body>
+</html>

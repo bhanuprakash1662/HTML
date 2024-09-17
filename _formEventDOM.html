@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #idcard{
+        border: 1px solid black;
+        height: 300px;
+        width: 250px;
+        background-color:rgb(158, 49, 49) ;
+    }
+    #imggg{
+        height: 120px;
+        width: 120px;
+        margin-left: 60px;
+
+    }
+</style>
+<body>
+    
+    <form><fieldset>
+        <label for="institute">Institute / organisation:</label>
+        <input type="text" id="name"><br><br>
+
+        <label for="fname">Name:</label>
+        <input type="text" id="fname"><br><br>
+        <!-- <label for="lname">Last Name:</label>
+        <input type="text" id="lname"><br><br> -->
+        <label for="email">Email:</label>
+        <input type="email" id="email"><br><br>
+
+        <label for="num">contact:</label>
+        <input type="tel" id="num"><br>
+        <br>
+        <label for="blood">Blood Group:</label>
+        <input type="tel" id="blood"><br><br>
+        <input type="radio" id="gender" name="male" value="male">
+        <label id="gander">male</label><br>
+        <input type="radio" id="female" name="male" value="female">
+        <label for="female">female</label><br><br>
+        <label for="photo">choose file to display profile:</label>
+        <input type="file" id="photo" accept="image/jpg, image/jpeg, image/png"><br><br>
+        
+        <input type="submit" value="create ID card"></input>
+
+    </fieldset>
+    </form>
+    <div id="idcard">
+    <h1 id="p1"></h1>
+    <img id="imggg"><br>
+    <span id="f"></span><br>
+    <span id="l"></span><br>
+    <span id="con"></span><br>
+    <span id="blo"></span><br>
+    <span id="gen"></span><br>
+    <span id="fe"></span>
+
+    </div>
+    <script>
+       
+        let form=document.getElementsByTagName("form")
+        form[0].addEventListener("submit",(e)=>{
+            e.preventDefault();
+        let name=document.getElementById("name")
+        let fname=document.getElementById("fname")
+        let lname=document.getElementById("lname")
+        let email=document.getElementById("email")
+        let num=document.getElementById("num")
+        let blood =document.getElementById("blood")
+        let gender=document.getElementById("gender")
+        let female=document.getElementById("female")
+        let photo=document.getElementById("photo")
+         //  imggg=document.getElementById("photo")
+            //imgsrc=URL.createObjectURL(imggg.files[0]) 
+        //let x=document.getElementById("fname").value
+           // myDiv.innerHTML=x
+        //    let x1=document.getElementById("lname").value
+          //  myDiv.innerHTML=x1
+          let id=document.getElementById("idcard")
+            let p1=document.getElementById("p1")
+            p1.innerHTML=name.value
+            p1.style.textAlign="center"
+
+            let p2=document.getElementById("f");
+            p2.innerHTML=(`Name: ${fname.value}`)
+            
+
+            let p3=document.getElementById("l")
+            p3.innerHTML=(`Email:${email.value}`)
+
+            let p4=document.getElementById("con")
+            p4.innerHTML=(`contact:${num.value}`)
+
+            let p5=document.getElementById("blo")
+            p5.innerHTML=(`Blood Group:${blood.value}`)
+
+            let p6=document.getElementById("gen")
+            p6.innerHTML=(`Gender:${gender.value}`)
+
+            let p7=document.getElementById("fe")
+            p7.innerHTML=(`Gender:${female.value}`)
+
+
+        let imggg=document.getElementById("imggg")
+        const reader=new FileReader()
+        reader.onload=(e)=>{
+            imggg.setAttribute("src",e.target.result)
+        }
+         reader.readAsDataURL(photo.files[0])
+
+
+         
+
+         } )      
+       
+    </script>
+</body>
+</html>

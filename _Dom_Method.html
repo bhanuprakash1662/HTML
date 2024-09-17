@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    #div2{
+        display:flex !important;
+        /*flex-direction: row;*/
+        flex-wrap: wrap !important;
+
+    }
+
+</style>
+<body>
+    <button id="btn1" onclick="demo()">add images</button>
+    <div id="div1"></div>
+    <div id="div2">
+    </div>
+        
+    <script>
+        let imgsrc=[{ title:"car",img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Ow-jdSFfiCijZRPsQz6GQcoF61ahECtZMA&s"},
+        {title:"iphone",img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsiZjoX6hH8GycAK9OLs6IweXVZ2zOnGInIg&s"},
+        {title:"bike",img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXUXDjGy8ctcMaPXMsED_E3O74OdhBvb6GfQ&s"}];
+        function demo(){
+            let imgind = Math.floor(Math.random()*imgsrc.length);
+            div1 = document.getElementById("div1")
+            div2 = document.getElementById("div2")
+            p=document.createElement("h3")
+            p.innerHTML=`${imgsrc[imgind].title}`
+            div1.style.border="3px solid"
+            //div1.style.display="grid" -->
+    
+           // div1.style.height="800px"
+            //div1.style.width="800px"
+            div1.style.backgroundColor="red"
+           
+            div2.style.border="2px solid black"
+            //div2.style.height="300px"
+            //div2.style.width="300px"
+            let imgg=document.createElement("img")
+            imgg.setAttribute("src",`${imgsrc[imgind].img}`)
+            
+           
+            imgg.style.height="100px"
+            imgg.style.width="100px"
+            div2.appendChild(imgg)
+            div2.appendChild(p)
+            div1.appendChild(div2);
+
+          
+        }
+    </script>
+    
+</body>
+</html>

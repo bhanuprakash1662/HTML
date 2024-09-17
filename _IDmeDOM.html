@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <!-- <img src="../css/CSS/images/ntr.jpg"> -->
+     <img></img>
+     <h3></h3>
+     <span id="p1"></span><br>
+     <span id="p2"></span>
+    </div>
+    <br>
+    <div id="ganesh">
+    <img  id="photo">
+    <h3 id="greet"></h3>
+    <h2 id="greet1"></h2>
+    <h1 id="greet2"></h1>
+</div>
+    
+    <script>
+       let div=document.getElementsByTagName("div")
+       div[0].style.backgroundColor="#697"
+       div[0].style.border="5px solid black"
+       div[0].style.height="350px"
+       div[0].style.width="250px"
+      // document.body.appendChild(div)
+      let imgg=document.getElementsByTagName("img")
+      imgg[0].setAttribute("src","../css/CSS/images/ntr.jpg")
+       imgg[0].style.height="150px"
+       imgg[0].style.width="120px"
+       imgg[0].style.margin="30px"
+       imgg[0].style.marginLeft="70px"
+       let name=document.getElementsByTagName("h3")
+       name[0].innerHTML=" Name :   NTR"
+       //name[0].style.border="1px solid black"
+       name[0].style.textAlign="center"
+       // div.appendChild(name) 
+      let p=document.getElementById("p1")
+      p.innerHTML="Age:41"
+      p.style.marginLeft="100px"
+
+      let p1=document.getElementById("p2")
+      p1.innerHTML=`movie: RRR`
+       p1.style.marginLeft="80px"
+
+    let ganesh=document.getElementById("ganesh")
+    ganesh.style.backgroundColor="red"
+    ganesh.style.height="250px"
+    ganesh.style.width="450px"
+     
+    let photo=document.getElementById("photo")
+        photo.setAttribute("src","../css/CSS/images/ganesh.jpg" )
+        photo.style.height="200px"
+        photo.style.width="200px"
+        photo.style.borderRadius="100px"
+        
+    let greet=document.getElementById("greet")
+    greet.innerHTML="Happy"
+    greet.style.marginLeft="210PX"  
+    greet.style.marginTop="-100PX" 
+    let greet1=document.getElementById("greet1")
+    greet1.innerHTML="Ganesh"
+    greet1.style.marginLeft="250PX"  
+    greet1.style.marginTop="-10PX" 
+    let greet2=document.getElementById("greet2")
+    greet2.innerHTML="Chaturthi"
+    greet2.style.marginLeft="300PX"  
+    greet2.style.marginTop="-10PX" 
+    </script>
+</body>
+</html>

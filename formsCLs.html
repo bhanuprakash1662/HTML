@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form onsubmit="demo(event)"> 
+    <input type="text" id="ip1">
+    <input type="text" id="ip2">
+    <input type="submit">
+</form> -->
+<form id="">
+    <input type="text" id="ip" >
+    <input type="submit">
+</form>
+<p id="p1"></p>
+<p id="p2"></p>
+    <script>
+      /*  let form=document.getElementsByTagName("form")
+        form[0].addEventListener("submit",(event)=>{
+            event.preventDefault();
+            let ip1=document.getElementsById("ip1")
+            let ip2=document.getElementsById("ip2")
+            let res=ip1.value+ip2.value;
+            let p=document.getElementsByTagName("p")
+            p[0].innerHTML=res
+        })*/
+
+        let form=document.getElementsByTagName("form")
+        form[0].addEventListener("submit",(e)=>{
+            e.preventDefault();
+        let ip1 = document.getElementById("ip");
+        let p = document.getElementById("p1");
+       p.innerHTML = ip1.value;
+       let p2 = document.getElementById("p2");
+       let num = Number(ip1);
+       if(num%2==0) {
+        p1.innerHTML= "even";
+
+       }
+       else{
+        p1.innerHTML = "odd"
+       }
+        
+       })
+    </script>
+</body>
+</html>
