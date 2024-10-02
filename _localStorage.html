@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form"><fieldset>
+        <h3><center>Registration Form</center></h3>
+        <!-- <label for="institute">Institute / organisation:</label>
+        <input type="text" id="name"><br><br> -->
+
+        <label for="fname">Name:</label>
+        <input type="text" id="fname"><br><br>
+        <!-- <label for="lname">Last Name:</label>
+        <input type="text" id="lname"><br><br> -->
+        <label for="email">Email:</label>
+        <input type="email" id="email"><br><br>
+
+        <label for="num">contact:</label>
+        <input type="tel" id="num"><br>
+        <br>
+        <label for="blood">Blood Group:</label>
+        <input type="tel" id="blood"><br><br>
+        <input type="submit"/>
+        <input type="button" id="clear" value="clear"/>
+        <!-- <button id="submit">submit</button> -->
+        
+       </form>
+       <!-- <button id="clear">clear</button> -->
+    </fieldset>
+   <p id="p1"></p>
+   <p id="p2"></p>
+   <p id="p3"></p>
+   <p id="p4"></p>
+
+    <script>
+        let form=document.getElementById("form")
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault()
+           
+         
+            let  fname=document.getElementById("fname")
+            localStorage.setItem("name",fname.value)
+            let email=document.getElementById("email")
+            localStorage.setItem("email",email.value)
+            let num=document.getElementById("num")
+            localStorage.setItem("num",num.value)
+            let blood=document.getElementById("blood")
+            localStorage.setItem("blood",blood.value)
+            let p1=document.getElementById("p1")
+            let x=localStorage.getItem("name")
+            p1.innerHTML=x 
+
+            let p2=document.getElementById("p2")
+            let y=localStorage.getItem("email")
+            p2.innerHTML=y
+
+            let p3=document.getElementById("p3")
+            let z=localStorage.getItem("num")
+            p3.innerHTML=z
+
+            let p4=document.getElementById("p4")
+            let a=localStorage.getItem("blood")
+            p4.innerHTML=a
+
+
+        })
+             let submit=document.getElementById("submit")
+            let clear=document.getElementById("clear")
+            clear.addEventListener("click",()=>{
+                localStorage.clear()
+            })
+       
+    </script> 
+
+
+
+
+
+</body>
+</html>

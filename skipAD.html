@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #skip{
+        position: relative;
+        margin-left: -65px;
+        margin-top: -60px;
+    }
+    #p1{
+        position: relative;
+    }
+    
+</style>
+<body>
+    <div >
+        <video  controls muted autoplay loop id="vid">
+            <source src="../css/CSS/images/video.mp4" >
+        </video>
+        <button id="skip">skip AD</button>
+        <video controls id="vid2" style="display: none;" muted autoplay >
+            <source src="../css/CSS/images/video2.mp4">
+    
+        </video>
+       
+
+    </div>
+    
+    <p id="p1"></p>
+    <script>
+       
+        let vid=document.getElementById("vid")
+        let skip=document.getElementById("skip")
+        let p1=document.getElementById("p1")
+       // let vid2=document.getElementById("vid2")
+        skip.addEventListener("click",()=>{
+            vid.style.display="none"
+            vid2.style.display="block"
+            
+
+
+        })
+        setTimeout(()=>{
+            vid.style.display="none"
+            vid2.style.display="block"
+           
+        },60000)
+        let z=  setInterval(()=>{
+            p1.innerHTML=x;
+            x--
+            if(x==-1)
+            clearInterval(z)
+        },1000,x=5)   
+        
+
+
+
+    
+    </script>
+</body>
+</html>

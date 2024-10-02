@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .btn{
+       
+        background-color: rgb(95, 165, 165);
+        font-size: 30px;
+        
+        
+    }
+    #box{
+        display: grid;
+    }
+    #ip1{
+        height: 100px;
+        background-color: rgb(23, 70, 70);
+        font-size: 60px;
+        color: rgb(163, 175, 175);
+    }
+    #box1{
+        
+        display: grid;
+        grid-template-columns:auto auto auto auto  ;
+        grid-template-rows: 50px  50px 50px 50px 50px; 
+       }
+
+</style>
+<body>
+    <div id="box">
+        <input type="text" id="ip1">
+        <div id="box1">
+        <button class="btn btn1" onclick="addvalue(1)">1</button>
+        <button class="btn btn2" onclick="addvalue(2)">2</button>
+        <button class="btn btn3" onclick="addvalue(3)">3</button>
+        <button class="btn btn1" onclick="addvalue(4)">4</button>
+        <button class="btn btn1" onclick="addvalue(5)">5</button>
+        <button class="btn btn1" onclick="addvalue(6)">6</button>
+        <button class="btn btn1" onclick="addvalue(7)">7</button>
+        <button class="btn btn1" onclick="addvalue(8)">8</button>
+        <button class="btn btn1" onclick="addvalue(9)">9</button>
+        <button class="btn btn1" onclick="addvalue(0)">0</button>
+        <button class="btn btn1" onclick="addvalue('+')">+</button>
+        <button class="btn btn1" onclick="addvalue('-')">-</button>
+        <button class="btn btn1" onclick="addvalue('/')">/</button>
+        <button class="btn btn1" onclick="addvalue('%')">%</button>
+        <button class="btn btn1" onclick="addvalue('*')">*</button>
+        <button class="btn btn1" id="eva">=</button>
+        <button class="btn btn1" onclick="addvalue('00')">00</button>
+        <button class="btn btn1" onclick="addvalue('.')">.</button>
+        <button class="btn btn1" id="clear">AC</button>
+        <button class="btn btn1" id="clear1"><<</button>
+    </div>
+    </div>
+    <script>
+        let ip1=document.getElementById("ip1")
+        let  eva= document.getElementById("eva")
+        let clear=document.getElementById("clear")
+        let clear1=document.getElementById("clear1")
+        
+        clear1.addEventListener("click",()=>{
+            ip1.value=ip1.value.slice(0,-1)
+        })
+
+        clear.addEventListener("click",()=>{
+            ip1.value=" "
+        })
+
+        function addvalue(x){
+            ip1.value+=x
+        }
+        eva.addEventListener("click",()=>{
+           let y= eval(ip1.value)
+           ip1.value=y
+
+        })
+       
+
+    </script>
+</body>
+</html>

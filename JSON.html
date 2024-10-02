@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myform" >
+        <input type="text" id="ip1">
+        <input type="text" id="ip2">
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <input type="submit">
+    </form>
+                                            
+<script>
+    let from =document.getElementById("myform")
+   
+    from.addEventListener("submit",()=>{
+      e.addEventListener()
+        let ip1 = document.getElementById("ip1")
+        let ip2 = document.getElementById("ip2")
+        let data = {"name":ip1.value,"city":ip2.value}
+        localStorage.setItem("user",JSON.stringify(data ))
+        let getdata  =JSON.parse(  localStorage.getItem("user"));
+        let p1=document.getElementById("p1")
+        p1.innerHTML=getdata.name
+        let p2=document.getElementById("p2")
+        p2.innerHTML=getdata.city 
+    })
+</script>
+ 
+</body>
+</html>
